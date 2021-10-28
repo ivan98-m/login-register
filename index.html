@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="img/Spider-Man-Emblema.png" width="350" alt="Spider-Man">
+        <!-- <h1 class="logo">Iniciar sesión</h1> -->
+        <form action="DB/inicio_sesion.php" method="POST" name="frm_login" id="frm_login">
+            <h1>Inicia sesión</h1>
+            <div class="formulario">
+                <div class="campo-entrada">
+                    <input type="text" name="username" id="username" placeholder="Usuario" required>
+                    <span class="border"></span>
+                    <small class="error" id="error">Digite su nombre de usuario</small>
+                </div>
+                <div class="campo-entrada">
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                    <span class="border"></span>
+                    <small class="error" id="error">Digite su contraseña</small>
+                </div>
+                <!-- <button type="submit">Iniciar sesión</button> -->
+                <input id="enviar-datos" class="button" type="button" value="Iniciar sesión">
+                <div class="crear-cuenta">
+                    ¿No tienes una cuenta?<a href="signup.html"> Crea tu cuenta aqui</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="scripts/validar.js"></script>
+</body>
+</html>

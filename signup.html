@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="img/Spider-Man-Emblema.png" width="350" alt="Spider-Man">
+        <form action="DB/registrarse.php" method="POST" name="frm_signup" id="frm_signup"> 
+            <h1>Registrarse</h1>
+            <div class="formulario">
+                <div class="campo-entrada">
+                    <input type="text" name="username" id="username" placeholder="Nombre de usuario">
+                    <span class="border"></span>
+                    <small class="error" id="error">Digite su nombre de usuario</small>
+                </div>
+                <div class="campo-entrada">
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <span class="border"></span>
+                    <small class="error" id="error">Digite su contraseña</small>
+                </div>
+                <div class="campo-entrada">
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmar contraseña">
+                    <span class="border"></span>
+                    <small class="error" id="error">Las contraseñas deben coincidir</small>
+                </div>
+                <!-- <button type="submit" id="enviar-datos">Regístrate</button> -->
+                <input id="enviar-datos" class="button" type="button" value="Regístrate">
+                <div class="registrar-cuenta">
+                    ¿Ya tienes una cuenta?<a href="index.html"> Inicia sesión</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="scripts/validar.js"></script>
+</body>
+</html>
