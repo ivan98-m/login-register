@@ -10,11 +10,21 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container signup">
         <img class="logo" src="img/Spider-Man-Emblema.png" width="350" alt="Spider-Man">
         <form action="DB/registrarse.php" method="POST" name="frm_signup" id="frm_signup"> 
             <h1>Registrarse</h1>
             <div class="formulario">
+                <div class="campo-entrada">
+                    <input type="text" name="names" id="names" placeholder="Nombres">
+                    <span class="border"></span>
+                    <small class="error" id="error">Digite su nombre</small>
+                </div>
+                <div class="campo-entrada">
+                    <input type="text" name="lastnames" id="lastnames" placeholder="Apellidos">
+                    <span class="border"></span>
+                    <small class="error" id="error">Digite sus apellidos</small>
+                </div>
                 <div class="campo-entrada">
                     <input type="text" name="username" id="username" placeholder="Nombre de usuario">
                     <span class="border"></span>

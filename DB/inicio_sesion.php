@@ -8,9 +8,8 @@
 
         // if ($results && password_verify($_POST['password'], $results['pass'])) {
         if ($results && md5($_POST['password']) == $results['pass']) {
-            echo'<script type="text/javascript">
-            window.location.href="../prueba.html";
-            </script>';
+            $usuario = $results['names']." ".$results['lastnames'];
+            header("Location: ../prueba.php?respuesta=$usuario");
         } else {
             echo'<script type="text/javascript">
             alert("Credenciales incorrectas");

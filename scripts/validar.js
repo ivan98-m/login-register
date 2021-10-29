@@ -86,7 +86,7 @@ function enviar(){
         //console.log(`${prop} = ${obj[prop]}`);
     }
     //if(!errors.username && !errors.password && !errors.confirm_password){
-    if(!verificar && cont == 3 && formSignup){
+    if(!verificar && cont == 5 && formSignup){
         //console.log(errors);
         console.log("noooo");
 
@@ -109,7 +109,7 @@ function enviar(){
         }, 300);
 
     }else{
-        console.log("noooo");
+        console.log("noooo", cont);
         Swal.fire({
             icon: 'error',
             title: 'Oops...',

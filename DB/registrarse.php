@@ -13,12 +13,14 @@
         window.location.href="../signup.html";
         </script>';
       }else{
-        $sql = "INSERT INTO users (user, pass) VALUES (:username, :password)";
+        $sql = "INSERT INTO users (user, pass, names, lastnames) VALUES (:username, :password, :names, :lastnames)";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':username', $_POST['username']);
         // $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $password = md5($_POST['password']);
         $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':names', $_POST['names']);
+        $stmt->bindParam(':lastnames', $_POST['lastnames']);
     
         if ($stmt->execute()) {
             echo'<script type="text/javascript">
