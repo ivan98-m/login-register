@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $_GET['respuesta'] ?></title>
     <link rel="stylesheet" href="css/estilos1.css">
+    <script src="https://kit.fontawesome.com/832b6972f7.js" crossorigin="anonymous"></script> 
 </head>
 <body>
-    <div class="container">
-        <img class="logo" src="img/Spider-Man-Emblema-red.png" alt="" width="80">
+    <div class="navbar">
+        <a href="#">
+            <img class="logo" src="img/logo.png" alt="" width="100">
+        </a>
         <div class="usuario">
-            <button class="btndesplegar">Usuario</button>
+            <button class="btndesplegar">
+                <!-- <img src="img/user-default.png" alt="" width="40"> -->
+            </button>
             <div class="contenido">
                 <p>
                 <?php
@@ -19,13 +24,14 @@
                 ?> 
                 </p>
                 <hr>
-                <a href="index.html">Salir</a>
+                <a href="index.html">
+                    <i class="fas fa-sign-in-alt"></i> Salir
+                </a>
             </div>
-            <!-- 
-            <br>
-            <a href="index.html">Salir</a> -->
         </div>
     </div>
-    <h1>BIENVENIDO!!!!!</h1>
+    <div class="container">
+        <h2>Hola, <?= $_GET['respuesta'] ?></h2>
+    </div>
 </body>
 </html>
